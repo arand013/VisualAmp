@@ -1,0 +1,31 @@
+:root{
+    --bgColor : hsla(242, 86%, 6%, 1);
+    --bgColorLight : hsla(242, 86%, 24%, 1);
+    --textColor : hsla(242, 86%, 88%, 1);
+    --textColorDark : hsla(242, 36%, 0%, 1);
+    --paperColor: hsla(242, 86%, 44%, 1);
+    --paperColorDark: hsla(242, 86%, 34%, 1);
+    --shadowColorFaint: hsla(0, 0%, 0%, 0.2);
+  }
+  
+  ::selected{
+    color: var(--textColorDark);
+  }
+  
+  html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: var(--bgColor);
+    background: linear-gradient(135deg, var(--bgColor), var(--bgColorLight));
+    color: var(--textColor);
+    font-family: 'Saira', sans-serif;
+    position: relative;
+  }
+  
+  *{
+    box-sizing: border-box;
+    transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
+  }
