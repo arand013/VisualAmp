@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Visual Amp ( A music visualizer! )
 
 <img width="1440" alt="Screen Shot 2021-12-29 at 10 38 33 PM" src="https://user-images.githubusercontent.com/81955843/147729082-a8b4504e-1af1-4a84-99f1-7bef66a072dd.png">
 
