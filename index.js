@@ -65,6 +65,53 @@ var vizInit = function (){
 
     var ball = new THREE.Mesh(icosahedronGeometry, lambertMaterial);
     ball.position.set(0, 0, 0);
+    group.add(ball);
+
+    var ambientLight = new THREE.AmbientLight(0xaaaaaa);
+    scene.add(ambientLight);
+
+    var spotLight = new THREE.SpotLight(0xffffff);
+    spotLight.intensity = 0.9;
+    spotLight.position.set(-10, 40, 20);
+    spotLight.lookAt(ball);
+    spotLight.castShadow = true;
+    scene.add(spotLight);
+    
+    scene.add(group);
+
+    document.getElementById('out').appendChild(renderer.domElement);
+
+    window.addEventListener('resize', onWindowResize, false);
+
+    render();
+
+    function render() {
+      analyser.getByteFrequencyData(dataArray);
+
+      var lowerHalfArray = dataArray.slice(0, (dataArray.length/2) - 1);
+      var upperHalfArray = dataArray.slice((dataArray.length/2) - 1, dataArray.length - 1);
+
+      var overallAvg = avg(dataArray);
+      var lowerMax = max(lowerHalfArray);
+      var lowerAvg = avg(lowerHalfArray);
+      var upperMax = max(upperHalfArray);
+      var upperAvg = avg(upperHalfArray);
+
+      var lowerMaxFr = lowerMax / lowerHalfArray.length;
+      var lowerAvgFr = lowerAvg / lowerHalfArray.length;
+      var upperMaxFr = upperMax / upperHalfArray.length;
+      var upperAvgFr = upperAvg / upperHalfArray.length;
+
+      makeRoughGround(plane, modulate(upperAvgFr, 0, 1, 0.5, 4));
+      makeRoughGround(plane2, modulate(lowerMaxFr, 0, 1, 0.5, 4));
+      
+      makeRoughBall(ball, modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8), modulate(upperAvgFr, 0, 1, 0, 4));
+
+      group.rotation.y += 0.005;
+      renderer.render(scene, camera);
+      requestAnimationFrame(render);
+    }
+
   
 } 
 }
