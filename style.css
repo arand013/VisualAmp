@@ -58,3 +58,40 @@
       z-index: 1;
   }
   
+  label.file{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    
+    background: var(--paperColor);
+    color: var(--textColor);
+    font-size: 1.25em;
+    font-weight: 700;
+    box-shadow: 0 20px 60px var(--shadowColorFaint);
+  
+    cursor: pointer;
+  }
+  
+  
+  label.file:hover{
+      background: var(--paperColorDark);
+      transform: translate3d(-50%, -55%, 0);
+  }
+  
+  label.file:active{
+      background: var(--paperColorDark);
+      transform: translate3d(-50%, -45%, 0);
+  }
+  
+  label.file.normal{
+    transform: translate3d(10%, 50%, 0);
+    padding: 0.2rem 2rem;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+  }
+  
