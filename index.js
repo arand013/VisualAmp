@@ -42,7 +42,7 @@ var vizInit = function (){
 
     var planeGeometry = new THREE.PlaneGeometry(800, 800, 20, 20);
     var planeMaterial = new THREE.MeshLambertMaterial({
-        color: 0x6904ce,
+        color: 0xad000f,
         side: THREE.DoubleSide,
         wireframe: true
     });
@@ -57,9 +57,9 @@ var vizInit = function (){
     plane2.position.set(0, -30, 0);
     group.add(plane2);
 
-    var icosahedronGeometry = new THREE.IcosahedronGeometry(10, 4);
+    var icosahedronGeometry = new THREE.DodecahedronGeometry(10, 4);
     var lambertMaterial = new THREE.MeshLambertMaterial({
-        color: 0xff00ee,
+        color: 0x481fff,
         wireframe: true
     });
 
@@ -120,7 +120,7 @@ var vizInit = function (){
     function makeRoughBall(mesh, bassFr, treFr) {
         mesh.geometry.vertices.forEach(function (vertex, i) {
             var offset = mesh.geometry.parameters.radius;
-            var amp = 7;
+            var amp = 6;
             var time = window.performance.now();
             vertex.normalize();
             var rf = 0.00001;
@@ -135,7 +135,7 @@ var vizInit = function (){
 
     function makeRoughGround(mesh, distortionFr) {
         mesh.geometry.vertices.forEach(function (vertex, i) {
-            var amp = 2;
+            var amp = 3;
             var time = Date.now();
             var distance = (noise.noise2D(vertex.x + time * 0.0003, vertex.y + time * 0.0001) + 0) * distortionFr * amp;
             vertex.z = distance;
