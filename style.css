@@ -29,3 +29,32 @@
     box-sizing: border-box;
     transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
   }
+
+  #canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  audio {
+    position: fixed;
+    left: 10px;
+    bottom: -10px;
+    width: calc(100% - 20px);
+  }
+  
+  audio.active{
+    bottom: 10px;
+  }
+  
+  #thefile{
+    width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: 1;
+  }
+  
