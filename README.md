@@ -2,16 +2,20 @@
 
 <img width="1440" alt="Screen Shot 2021-12-29 at 10 38 33 PM" src="https://user-images.githubusercontent.com/81955843/147729082-a8b4504e-1af1-4a84-99f1-7bef66a072dd.png">
 
-(https://github.com/arand013/Music-Visualizer-_VisualAmp_-/edit/main/README.md) 
+( <https://arand013.github.io/Music-Visualizer-_VisualAmp_-/> )
 
 This project is intended to demonstate a project utilizing THREE.js — & - WebAudio APi to create a mix of 3D rendering WebGL framework.
 
 <br> 
 
 This visualizer is a simple way. To import effects of a music player and 3D graphics. 
+
 <br> 
- To use view here <https://arand013.github.io/Music-Visualizer-_VisualAmp_-/> and select your favorite
+
+To test view url and select your favorite song
+
 <br> 
+Must be  
 .mp3 / .mp4 / .wav file to see it work.
 
 
