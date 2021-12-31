@@ -10,8 +10,9 @@ This project is intended to demonstrate best practices utilizing THREE.js & WebA
 This visualizer is a simple way. To import effects of a music player and 3D graphics. 
 <br> 
 
-To test: <https://arand013.github.io/Music-Visualizer-_VisualAmp_-/>  and select your favorite song
+To test visit: <https://arand013.github.io/Music-Visualizer-_VisualAmp_-/>  and select your favorite song
 <br> 
+
 Must be  
 .mp3 / .mp4 / .wav file to see it work.
 
@@ -34,9 +35,7 @@ Must be
 7. Launch 
 
 
-[Link](url) and ![Image](src)
-```
+<img width="1440" alt="Screen Shot 2021-12-29 at 10 38 46 PM" src="https://user-images.githubusercontent.com/81955843/147799951-5a86dff4-ebd2-4c63-9775-00fab4264009.png">
 
 ## For more details see. 
-
 Check out our [documentation](https://github.com/arand013/Music-Visualizer-_VisualAmp_-) or [contact support](alexanderaranda@ymail.com) and we’ll help you sort it out.
